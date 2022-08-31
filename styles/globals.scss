@@ -1,6 +1,19 @@
-$primary-color: #64ff00;
+$primary-color: #0063f7;
 $heading-color: #111111;
 $font-color: #4e4e4e;
+
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// TYPOGRAPHY
+h1 {
+	font-size: 72px;
+	background: linear-gradient($primary-color, #333);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
 h1,
 h2,
@@ -13,4 +26,34 @@ h6 {
 
 p {
 	color: $font-color;
+}
+
+// RESULTS
+.results {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-left: 0;
+	gap: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.results {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.results {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+.results-item {
+	list-style: none;
+	flex: 0 0 33.333333%;
+	background: #eee;
+	border-radius: 10px;
+	padding: 10px 20px;
 }
